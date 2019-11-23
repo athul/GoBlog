@@ -2,16 +2,20 @@ package main
 
 import (
 	"io/ioutil"
-	//"html/template"
+	"html/template"
 	"fmt"
 	"net/http"
 	"log"
 
 
-	"github.com/gin-contrib/sse"
+	//"github.com/gin-contrib/sse"
     "github.com/gin-gonic/gin"
     "gopkg.in/russross/blackfriday.v2"
 )
+type Post struct{
+	Title string
+	Content template.HTML
+}
 func main(){
 	r:=gin.Default()
 	r.Use(gin.Logger())
