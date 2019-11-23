@@ -13,6 +13,7 @@ import (
     "gopkg.in/russross/blackfriday.v2"
 )
 type Post struct{
+	//blog post
 	Title string
 	Content template.HTML
 }
